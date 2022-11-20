@@ -15,11 +15,11 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return 'Hello, Jo!';
+  return 'Hello, ' + name + '!';
 }
 
 // Remember to call the function to test
-console.log('Test - should say "Hello, Jo!":', helloName());
+console.log('Test - should say "Hello, Jo!":', helloName('Jo'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -59,7 +59,8 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
+
+function getLast(array) {
   if (array.length > 0){
     return array[array.length-1];
   }
@@ -68,13 +69,23 @@ function getLast( array ) {
   }
 }
 
-console.log('Test - should read 3:', getLast(1,2,3));
+let catArray = ['Mischa', 'Zoya'];
+console.log('Test - should read Zoya:', getLast(catArray));
+
+let dinnerArray = ['Turkey', 'Gravy', 'Veggies']
+console.log('Test - should read Veggies:', getLast(dinnerArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find( value, array ){
-  
+  let nameArray = ['Tom', 'Jane', 'Denise']
+  for (let i=0; i<nameArray.length; i++){
+    
+    return i;
+  }
+
 }
 
 // ----------------------
