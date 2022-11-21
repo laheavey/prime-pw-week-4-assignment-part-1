@@ -101,23 +101,39 @@ console.log('Test - should return false:', find(25, numberArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  for (i=0; i<string.length; i++) {
+    if (letter===string[i]) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll(array) {
   let sum = 0
+  for (value of array) {
+    sum += value;
+  }  
   // TODO: loop to add items
   return sum;
 }
+
+console.log ('Sum of the array - should say 106:', sumAll(numberArray))
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function allPositive (array) {
+  return array > 0;
+}
 
+console.log(numberArray.filter(allPositive));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
