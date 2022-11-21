@@ -80,13 +80,20 @@ console.log('Test - should read Veggies:', getLast(dinnerArray));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 function find( value, array ){
-  let nameArray = ['Tom', 'Jane', 'Denise']
-  for (let i=0; i<nameArray.length; i++){
-    
-    return i;
+  for (i=0; i<array.length; i++) {
+    if (value===array[i]) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
+  }
+  
+console.log('Test - should return true:', find('Mischa', catArray));
 
-}
+let numberArray = [1, 30, 85, -10, 0]
+console.log('Test - should return false:', find(25, numberArray));
 
 // ----------------------
 // Stretch Goals
